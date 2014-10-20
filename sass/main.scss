@@ -7,6 +7,19 @@ $text-colour: #333333;
 $light-text: #808080;
 $accent-colour:#ed2b32;
 
+@mixin visuallyhidden { 
+  position: absolute; 
+  overflow: hidden; 
+  clip: rect(0 0 0 0); 
+  height: 1px; width: 1px; 
+  margin: -1px; padding: 0; border: 0; 
+}
+
+@mixin box-sizing( $type: border-box ) {         
+   -moz-box-sizing: $type;
+   box-sizing: $type;
+}
+
 body {
   font-family: callunaregular, Georgia, Times, "Times New Roman", serif;
   color:$text-colour;
@@ -19,6 +32,19 @@ p {
 
 a {
   color:$accent-colour;
+}
+
+.btn {
+  display:inline-block;
+  text-decoration:none;
+  background-color:$accent-colour;
+  color:#fff;
+  padding:8px 14px 5px 14px;
+  border:none;
+  
+  &.back {
+    background-color:$light-text;
+  }
 }
 
 .container {
@@ -86,21 +112,17 @@ h2 {
 }
 .section.active {
   .fp-controlArrow {
-    &.fp-prev,
-    &.fp-next {
-      -webkit-animation-duration: 2s;
-      animation-duration: 2s;
-      -webkit-animation-fill-mode: both;
-      animation-fill-mode: both;
-    
-      @extend.shake;
-    }
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+  
+    @extend.shake;
   }
 }
 
 
 .quotes {
-  
   blockquote {
     font-size:32px;
     line-height:1.3;
@@ -110,6 +132,77 @@ h2 {
     cite {
       font-size:20px;
       display:block;
+    }
+  }
+}
+
+.signup {
+  .fp-controlArrow {
+    display:none;
+  }
+  
+  &.active {
+    .slide.active {
+      .btn {
+        @extend.pulse;
+        -webkit-animation-iteration-count: 4;
+        animation-iteration-count: 4;
+      }
+    }
+  }
+  
+  .ss-required-asterisk {
+    color:$accent-colour;
+  }
+  
+  .ss-item {
+    margin-bottom:1em;
+    @include box-sizing();
+    
+    textarea {
+      width:100%;
+    }
+  }
+  
+  .form1 {
+    .ss-item {
+      float:left;
+      width:50%;
+      padding-right:30px;
+      
+      &:last-of-type {
+        padding-left:30px;
+        padding-right:0;
+      }
+      
+      input {
+        width:100%;
+      }
+    }
+  }
+  .required-message {
+    @include visuallyhidden();
+  }
+  
+  .form2 {
+    .ss-item {
+      float:left;
+      width:33%;
+      padding-right:30px;
+      
+      &:last-of-type {
+        padding-left:30px;
+        padding-right:0;
+      }
+      
+      &:nth-of-type(2) {
+        padding-left:15px;
+        padding-right:15px;
+      }
+      
+      input {
+        width:100%;
+      }
     }
   }
 }

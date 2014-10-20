@@ -646,7 +646,7 @@ Copyright (c) 2014 Daniel Eden
   100% {
     -webkit-transform: scale3d(1, 1, 1);
     transform: scale3d(1, 1, 1); } }
-.pulse {
+.pulse, .signup.active .slide.active .btn {
   -webkit-animation-name: pulse;
   animation-name: pulse; }
 
@@ -734,7 +734,7 @@ Copyright (c) 2014 Daniel Eden
   20%, 40%, 60%, 80% {
     -webkit-transform: translate3d(10px, 0, 0);
     transform: translate3d(10px, 0, 0); } }
-.shake, .section.active .fp-controlArrow.fp-prev, .section.active .fp-controlArrow.fp-next {
+.shake, .section.active .fp-controlArrow {
   -webkit-animation-name: shake;
   animation-name: shake; }
 
@@ -2929,6 +2929,16 @@ p {
 a {
   color: #ed2b32; }
 
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  background-color: #ed2b32;
+  color: #fff;
+  padding: 8px 14px 5px 14px;
+  border: none; }
+  .btn.back {
+    background-color: gray; }
+
 .container {
   max-width: 920px;
   padding: 0 20px;
@@ -2979,7 +2989,7 @@ h2 {
 .fp-controlArrow.fp-next {
   background-image: url(../img/right.png); }
 
-.section.active .fp-controlArrow.fp-prev, .section.active .fp-controlArrow.fp-next {
+.section.active .fp-controlArrow {
   -webkit-animation-duration: 2s;
   animation-duration: 2s;
   -webkit-animation-fill-mode: both;
@@ -2993,3 +3003,47 @@ h2 {
   .quotes blockquote cite {
     font-size: 20px;
     display: block; }
+
+.signup .fp-controlArrow {
+  display: none; }
+.signup.active .slide.active .btn {
+  -webkit-animation-iteration-count: 4;
+  animation-iteration-count: 4; }
+.signup .ss-required-asterisk {
+  color: #ed2b32; }
+.signup .ss-item {
+  margin-bottom: 1em;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+  .signup .ss-item textarea {
+    width: 100%; }
+.signup .form1 .ss-item {
+  float: left;
+  width: 50%;
+  padding-right: 30px; }
+  .signup .form1 .ss-item:last-of-type {
+    padding-left: 30px;
+    padding-right: 0; }
+  .signup .form1 .ss-item input {
+    width: 100%; }
+.signup .required-message {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0; }
+.signup .form2 .ss-item {
+  float: left;
+  width: 33%;
+  padding-right: 30px; }
+  .signup .form2 .ss-item:last-of-type {
+    padding-left: 30px;
+    padding-right: 0; }
+  .signup .form2 .ss-item:nth-of-type(2) {
+    padding-left: 15px;
+    padding-right: 15px; }
+  .signup .form2 .ss-item input {
+    width: 100%; }
