@@ -12,7 +12,9 @@
 	<link rel="stylesheet" type="text/css" href="css/main.css" />
 </head>
 <body>
-  <form action="https://docs.google.com/forms/d/1qQQPa8dR8WS5Z9cTyzuO7yI81m6YofOAY1AiynwYNqY/formResponse" method="POST" id="ss-form" target="_self" onsubmit="">
+  <script type="text/javascript">var submitted=false;</script>
+  <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted){window.location='http://futureofscholarship.org/#action/4';}"></iframe>
+  <form action="https://docs.google.com/forms/d/1qQQPa8dR8WS5Z9cTyzuO7yI81m6YofOAY1AiynwYNqY/formResponse" method="POST" id="ss-form" target="hidden_iframe" onsubmit="submitted=true;">
     <div id="fullpage">
       <div class="section active" id="section0" data-anchor="top">
         <div class="container">
@@ -169,6 +171,14 @@
             
             <input type="submit" name="submit" value="Submit" id="ss-submit" class="jfk-button jfk-button-action btn">
             
+          </div>
+        </div>
+        
+        <div class="slide" data-anchor="form4">
+          <div class="container">
+            <p>Thank you for signing up to get updates from the Future of Scholarship.</p>
+            <p>We'll be in touch soon!</p>
+            <a class="back btn" href="./">Back</a>
           </div>
         </div>
         
