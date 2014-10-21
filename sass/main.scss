@@ -34,7 +34,7 @@ html {
 body {
   font-family: callunaregular, Georgia, Times, "Times New Roman", serif;
   color:$text-colour;
-  @include font-size(32);
+  @include font-size(28);
 }
 
 p {
@@ -52,6 +52,7 @@ a {
   color:#fff;
   padding:8px 14px 5px 14px;
   border:none;
+  border-radius:0;
   
   &.back {
     background-color:$light-text;
@@ -59,8 +60,8 @@ a {
 }
 
 .container {
-  max-width:920px;
-  padding:0 20px;
+  max-width:900px;
+  padding:0 80px;
   margin-left:auto;
   margin-right:auto;
 }
@@ -169,11 +170,36 @@ h2 {
     margin-bottom:1em;
     @include box-sizing();
     
+    .ss-q-item-label {
+      @include font-size(24);
+    }
+    
     textarea {
       width:100%;
     }
   }
   
+  .required-message {
+    @include visuallyhidden();
+  }
+  
+  .ok-link {
+    position:absolute;
+    bottom:0;
+    left:50%;
+    width:74px;
+    height:100px;
+    margin-left:-37px;
+    overflow:hidden;
+    z-index:3;
+    background-image:url(http://assets.okfn.org/images/ok-ribbon.svg);
+    background-size:auto 300px;
+    background-position:center -500px;
+    text-indent:-9999px;
+  }
+}
+
+@media only screen and (min-width: 641px) {
   .form1 {
     .ss-item {
       float:left;
@@ -189,9 +215,6 @@ h2 {
         width:100%;
       }
     }
-  }
-  .required-message {
-    @include visuallyhidden();
   }
   
   .form2 {
@@ -215,19 +238,10 @@ h2 {
       }
     }
   }
-  
-  .ok-link {
-    position:absolute;
-    bottom:0;
-    left:50%;
-    width:74px;
-    height:100px;
-    margin-left:-37px;
-    overflow:hidden;
-    z-index:3;
-    background-image:url(http://assets.okfn.org/images/ok-ribbon.svg);
-    background-size:auto 300px;
-    background-position:center -500px;
-    text-indent:-9999px;
+}
+
+@media only screen and (min-width: 1025px) {
+  body {
+    @include font-size(32);
   }
 }

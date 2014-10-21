@@ -2924,8 +2924,8 @@ html {
 body {
   font-family: callunaregular, Georgia, Times, "Times New Roman", serif;
   color: #333333;
-  font-size: 32px;
-  font-size: 3.2rem; }
+  font-size: 28px;
+  font-size: 2.8rem; }
 
 p {
   line-height: 1.3; }
@@ -2939,13 +2939,14 @@ a {
   background-color: #ed2b32;
   color: #fff;
   padding: 8px 14px 5px 14px;
-  border: none; }
+  border: none;
+  border-radius: 0; }
   .btn.back {
     background-color: gray; }
 
 .container {
-  max-width: 920px;
-  padding: 0 20px;
+  max-width: 900px;
+  padding: 0 80px;
   margin-left: auto;
   margin-right: auto; }
 
@@ -3021,16 +3022,10 @@ h2 {
   margin-bottom: 1em;
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
+  .signup .ss-item .ss-q-item-label {
+    font-size: 24px;
+    font-size: 2.4rem; }
   .signup .ss-item textarea {
-    width: 100%; }
-.signup .form1 .ss-item {
-  float: left;
-  width: 50%;
-  padding-right: 30px; }
-  .signup .form1 .ss-item:last-of-type {
-    padding-left: 30px;
-    padding-right: 0; }
-  .signup .form1 .ss-item input {
     width: 100%; }
 .signup .required-message {
   position: absolute;
@@ -3041,18 +3036,6 @@ h2 {
   margin: -1px;
   padding: 0;
   border: 0; }
-.signup .form2 .ss-item {
-  float: left;
-  width: 33%;
-  padding-right: 30px; }
-  .signup .form2 .ss-item:last-of-type {
-    padding-left: 30px;
-    padding-right: 0; }
-  .signup .form2 .ss-item:nth-of-type(2) {
-    padding-left: 15px;
-    padding-right: 15px; }
-  .signup .form2 .ss-item input {
-    width: 100%; }
 .signup .ok-link {
   position: absolute;
   bottom: 0;
@@ -3066,3 +3049,31 @@ h2 {
   background-size: auto 300px;
   background-position: center -500px;
   text-indent: -9999px; }
+
+@media only screen and (min-width: 641px) {
+  .form1 .ss-item {
+    float: left;
+    width: 50%;
+    padding-right: 30px; }
+    .form1 .ss-item:last-of-type {
+      padding-left: 30px;
+      padding-right: 0; }
+    .form1 .ss-item input {
+      width: 100%; }
+
+  .form2 .ss-item {
+    float: left;
+    width: 33%;
+    padding-right: 30px; }
+    .form2 .ss-item:last-of-type {
+      padding-left: 30px;
+      padding-right: 0; }
+    .form2 .ss-item:nth-of-type(2) {
+      padding-left: 15px;
+      padding-right: 15px; }
+    .form2 .ss-item input {
+      width: 100%; } }
+@media only screen and (min-width: 1025px) {
+  body {
+    font-size: 32px;
+    font-size: 3.2rem; } }
