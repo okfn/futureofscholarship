@@ -34,7 +34,7 @@ html {
 body {
   font-family: callunaregular, Georgia, Times, "Times New Roman", serif;
   color:$text-colour;
-  @include font-size(28);
+  @include font-size(26);
 }
 
 p {
@@ -73,7 +73,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  @include font-size(75);
+  @include font-size(72);
 }
 
 h2 {
@@ -243,5 +243,8 @@ h2 {
 @media only screen and (min-width: 1025px) {
   body {
     @include font-size(32);
+  }
+  h1 {
+    @include font-size(75);
   }
 }
