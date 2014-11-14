@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
@@ -3036,19 +3035,30 @@ h2 {
   margin: -1px;
   padding: 0;
   border: 0; }
-.signup .ok-link {
+.signup footer {
   position: absolute;
-  bottom: 0;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+  font-size: 1.4rem;
+  z-index: 3; }
+
+.ok-link {
+  position: absolute;
+  top: 0;
   left: 50%;
   width: 74px;
   height: 100px;
   margin-left: -37px;
   overflow: hidden;
   z-index: 3;
-  background-image: url(http://assets.okfn.org/images/ok-ribbon.svg);
+  background-image: url(http://assets.okfn.org/images/ok-ribbon.png);
   background-size: auto 300px;
   background-position: center -500px;
   text-indent: -9999px; }
+  .inlinesvg .ok-link {
+    background-image: url(http://assets.okfn.org/images/ok-ribbon.svg); }
 
 @media only screen and (min-width: 641px) {
   .form1 .ss-item {

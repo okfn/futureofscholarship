@@ -183,19 +183,32 @@ h2 {
     @include visuallyhidden();
   }
   
-  .ok-link {
+  footer {
     position:absolute;
-    bottom:0;
-    left:50%;
-    width:74px;
-    height:100px;
-    margin-left:-37px;
-    overflow:hidden;
+    bottom:10px;
+    width:100%;
+    text-align:center;
+    @include font-size(14);
     z-index:3;
+  }
+}
+
+.ok-link {
+  position:absolute;
+  top:0;
+  left:50%;
+  width:74px;
+  height:100px;
+  margin-left:-37px;
+  overflow:hidden;
+  z-index:3;
+  background-image:url(http://assets.okfn.org/images/ok-ribbon.png);
+  background-size:auto 300px;
+  background-position:center -500px;
+  text-indent:-9999px;
+  
+  .inlinesvg & {
     background-image:url(http://assets.okfn.org/images/ok-ribbon.svg);
-    background-size:auto 300px;
-    background-position:center -500px;
-    text-indent:-9999px;
   }
 }
 
